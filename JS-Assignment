@@ -9,51 +9,54 @@ Assessment Requirements
 */
 
 // Create a variable to hold your NFTs
-let nftCollections = [];
+let nftCollection = [];
 
 // This function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function createNFT(name, role, rarity, ability1, ability2, ability3, ultimate) {
+function createNFT(name, role, rarity, efficiency, ability1, ability2, ability3, ultimate) {
     let nft = {
         name: name,
         role: role,
         rarity: rarity,
+        efficiency: efficiency,
         ability1: ability1,
         ability2: ability2,
         ability3: ability3,
         ultimate: ultimate
     };
-    nftCollections.push(nft);
+    nftCollection.push(nft);
 }
 
 // Create a "loop" that will go through an "array" of NFTs
 // and print their metadata with console.log()
 function displayNFTs() {
-    for (let i = 0; i < nftCollections.length; i++) {
+    for (let i = 0; i < nftCollection.length; i++) {
         console.log("\n\n==================== NFT DETAILS ====================\n\n");
-        console.log("Name: " + nftCollections[i].name);
-        console.log("Role: " + nftCollections[i].role);
-        console.log("Rarity: " + nftCollections[i].rarity);
-        console.log("Ability 1: " + nftCollections[i].ability1);
-        console.log("Ability 2: " + nftCollections[i].ability2);
-        console.log("Ability 3: " + nftCollections[i].ability3);
-        console.log("Ultimate: " + nftCollections[i].ultimate);
+        console.log("Name: " + nftCollection[i].name);
+        console.log("Role: " + nftCollection[i].role);
+        console.log("Rarity: " + nftCollection[i].rarity);
+        console.log("Ability 1: " + nftCollection[i].ability1);
+        console.log("Ability 2: " + nftCollection[i].ability2);
+        console.log("Ability 3: " + nftCollection[i].ability3);
+        console.log("Ultimate: " + nftCollection[i].ultimate);
+        console.log("Efficiency: " + nftCollection[i].efficiency + "%");
         console.log("\n\n====================================================\n");
     }
 }
 
 // Print the total number of NFTs we have created to the console
 function getTotalNFTCount() {
-    console.log("Total NFTs Created: " + nftCollections.length);
+    console.log("Total NFTs Created: " + nftCollection.length);
 }
 
 // Call your functions below this line
-createNFT("Reyna", "Duelist", "Legendary", "Leer", "Devour", "Dismiss", "Empress");
-createNFT("Jett", "Duelist", "Epic", "Cloudburst", "Updraft", "Tailwind", "Blade Storm");
-createNFT("Cypher", "Sentinel", "Rare", "Trapwire", "Cyber Cage", "Spycam", "Neural Theft");
-createNFT("Sage", "Sentinel", "Uncommon", "Barrier Orb", "Slow Orb", "Healing Orb", "Resurrection");
-createNFT("Omen", "Controller", "Mythic", "Shrouded Step", "Paranoia", "Dark Cover", "From the Shadows");
+createNFT("Reyna", "Duelist", "Legendary", 95, "Leer", "Devour", "Dismiss", "Empress");
+createNFT("Jett", "Duelist", "Epic", 90, "Cloudburst", "Updraft", "Tailwind", "Blade Storm");
+createNFT("Cypher", "Sentinel", "Rare", 85, "Trapwire", "Cyber Cage", "Spycam", "Neural Theft");
+createNFT("Omen", "Controller", "Mythic", 88, "Shrouded Step", "Paranoia", "Dark Cover", "From the Shadows");
+createNFT("Sova", "Initiator", "Epic", 92, "Shock Bolt", "Owl Drone", "Recon Bolt", "Hunter's Fury");
 
 displayNFTs();
 getTotalNFTCount();
+
