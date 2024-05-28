@@ -15,7 +15,7 @@ let nftCollections = [];
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
 function mintNFT(name, role, efficiency, ability1, ability2, ability3, ultimate) {
-    let nft = {
+    let NFT = {
         name: name,
         role: role,
         efficiency: efficiency,
@@ -24,7 +24,7 @@ function mintNFT(name, role, efficiency, ability1, ability2, ability3, ultimate)
         ability3: ability3,
         ultimate: ultimate
     };
-    nftCollections.push(nft);
+    nftCollections.push(NFT);
 }
 
 // Create a "loop" that will go through an "array" of NFTs
