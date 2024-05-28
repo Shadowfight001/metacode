@@ -14,7 +14,7 @@ let nftCollections = [];
 // This function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function createNFT(name, role, efficiency, ability1, ability2, ability3, ultimate) {
+function mintNFT(name, role, efficiency, ability1, ability2, ability3, ultimate) {
     let nft = {
         name: name,
         role: role,
@@ -29,7 +29,7 @@ function createNFT(name, role, efficiency, ability1, ability2, ability3, ultimat
 
 // Create a "loop" that will go through an "array" of NFTs
 // and print their metadata with console.log()
-function displayNFTs() {
+function listNFTs() {
     for (let i = 0; i < nftCollections.length; i++) {
         console.log("\n\n==================== NFT DETAILS ====================\n\n");
         console.log("Name: " + nftCollections[i].name);
@@ -44,16 +44,16 @@ function displayNFTs() {
 }
 
 // Print the total number of NFTs we have created to the console
-function getTotalNFTCount() {
+function getTotalSupply() {
     console.log("Total NFTs Created: " + nftCollections.length);
 }
 
 // Call your functions below this line
-createNFT("Reyna", "Duelist", 95, "Leer", "Devour", "Dismiss", "Empress");
-createNFT("Jett", "Duelist", 90, "Cloudburst", "Updraft", "Tailwind", "Blade Storm");
-createNFT("Cypher", "Sentinel", 85, "Trapwire", "Cyber Cage", "Spycam", "Neural Theft");
-createNFT("Omen", "Controller", 88, "Shrouded Step", "Paranoia", "Dark Cover", "From the Shadows");
-createNFT("Sova", "Initiator", 92, "Shock Bolt", "Owl Drone", "Recon Bolt", "Hunter's Fury");
+mintNFT("Reyna", "Duelist", 95, "Leer", "Devour", "Dismiss", "Empress");
+mintNFT("Jett", "Duelist", 90, "Cloudburst", "Updraft", "Tailwind", "Blade Storm");
+mintNFT("Cypher", "Sentinel", 85, "Trapwire", "Cyber Cage", "Spycam", "Neural Theft");
+mintNFT("Omen", "Controller", 88, "Shrouded Step", "Paranoia", "Dark Cover", "From the Shadows");
+mintNFT("Sova", "Initiator", 92, "Shock Bolt", "Owl Drone", "Recon Bolt", "Hunter's Fury");
 
-displayNFTs();
-getTotalNFTCount();
+listNFTs();
+getTotalSupply();
