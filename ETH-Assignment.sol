@@ -18,8 +18,8 @@ pragma solidity ^0.8.19;
 contract MyToken {
 
     // public variables here
-string public myTokenName="Rhythm";
-string public myTokenAbbr="Rhm";
+string public myTokenName="Udit";
+string public myTokenAbbr="Ud";
 uint public totalSupply=0;
     // mapping variable here
 mapping (address => uint) public balance;
