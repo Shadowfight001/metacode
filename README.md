@@ -28,12 +28,13 @@ Mapping:
     mapping (address => uint) public `balance`;
 
 Functions:
-    **mint**- This function increases the totalSupply by _value and adds the same amount to the balance of _address.
-    **burn**- This function decreases the totalSupply by _value and subtracts the same amount from the balance of _address. It checks if the balance of _address is 
+    `mint`- This function increases the totalSupply by _value and adds the same amount to the balance of _address.
+    `burn`- This function decreases the totalSupply by _value and subtracts the same amount from the balance of _address. It checks if the balance of _address is 
           sufficient to burn the specified amount.
 
 
 Usage:
+
   1- Deploy the MyToken contract to your preferred Ethereum network.
   2- Use the mint function to increase the token supply and assign tokens to specific addresses.
   3- Use the burn function to decrease the token supply and remove tokens from specific addresses, ensuring sufficient balance.
